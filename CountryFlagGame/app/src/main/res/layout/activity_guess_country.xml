@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout for Guess Country. Functional controls are connected to Java with findViewById(). -->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@color/navy">
+
+            <!-- Navigation button used to leave the current screen/game mode. -->
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="←  Back"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guess the Country"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Identify the country shown by the flag"
+                android:textColor="@color/text_light_blue"
+                android:textSize="15sp"
+                android:layout_marginTop="4dp" />
+
+            <!-- Displays the score for the current round in the header. -->
+            <TextView
+                android:id="@+id/scoreText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Score: 0"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginTop="14dp" />
+
+        </LinearLayout>
+
+        <!-- GAME CARD -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="@drawable/card_background"
+                android:elevation="4dp"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Which country is this?"
+                    android:textColor="@color/text_dark"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="14dp" />
+
+                <!-- Displays the randomly selected flag for this round. -->
+                <ImageView
+                    android:id="@+id/flagImage"
+                    android:layout_width="260dp"
+                    android:layout_height="170dp"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Country Flag"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- Dropdown containing all available country names. -->
+                <Spinner
+                    android:id="@+id/countrySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/secondary_button"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp" />
+
+                <!-- Displays CORRECT! or WRONG! feedback after checking an answer. -->
+                <TextView
+                    android:id="@+id/resultText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="18dp" />
+
+                <!-- Displays the correct country in blue when the player is wrong. -->
+                <TextView
+                    android:id="@+id/correctAnswerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginTop="6dp" />
+
+                <!-- Main action button. Java changes this from Submit to Next when a round ends. -->
+                <Button
+                    android:id="@+id/submitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="SUBMIT"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@drawable/primary_button"
+                    android:backgroundTint="@color/navy"
+                    android:layout_marginTop="22dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

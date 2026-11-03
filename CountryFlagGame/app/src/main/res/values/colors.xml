@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Central colour palette used throughout the app to keep the visual design consistent. -->
+<resources>
+
+    <!-- MAIN BRAND COLOURS -->
+    <color name="navy">#082B61</color>
+    <color name="navy_dark">#061F47</color>
+    <color name="blue_accent">#169BFF</color>
+    <color name="blue_light">#EAF5FF</color>
+
+    <!-- BACKGROUNDS -->
+    <color name="background_light">#F5F7FA</color>
+    <color name="card_white">#FFFFFF</color>
+
+    <!-- TEXT -->
+    <color name="text_dark">#20242A</color>
+    <color name="text_grey">#707782</color>
+    <color name="text_light_blue">#C8D8ED</color>
+
+    <!-- GAME FEEDBACK -->
+    <color name="correct_green">#20A464</color>
+    <color name="wrong_red">#E5484D</color>
+
+    <!-- BORDERS -->
+    <color name="divider">#DDE3EA</color>
+
+    <!-- STANDARD -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+</resources>

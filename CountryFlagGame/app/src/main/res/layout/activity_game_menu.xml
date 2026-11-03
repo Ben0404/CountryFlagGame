@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout for Game Menu. Functional controls are connected to Java with findViewById(). -->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:background="@color/navy">
+
+            <!-- Navigation button used to leave the current screen/game mode. -->
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="←  Back"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Game Modes"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose your challenge"
+                android:textColor="@color/text_light_blue"
+                android:textSize="16sp"
+                android:layout_marginTop="6dp" />
+
+            <View
+                android:layout_width="55dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="14dp"
+                android:background="@color/blue_accent" />
+
+        </LinearLayout>
+
+        <!-- GAME CARDS -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- GUESS COUNTRY -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_background"
+                android:elevation="5dp"
+                android:padding="20dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Guess the Country"
+                    android:textColor="@color/text_dark"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose the correct country for the displayed flag."
+                    android:textColor="@color/text_grey"
+                    android:textSize="14sp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="18dp" />
+
+                <!-- Launches GuessCountryActivity. -->
+                <Button
+                    android:id="@+id/guessCountryButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="PLAY"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@drawable/primary_button"
+                    android:backgroundTint="@color/navy" />
+
+            </LinearLayout>
+
+            <!-- GUESS HINTS -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_background"
+                android:elevation="5dp"
+                android:padding="20dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Guess-Hints"
+                    android:textColor="@color/text_dark"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reveal the country name one letter at a time."
+                    android:textColor="@color/text_grey"
+                    android:textSize="14sp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="18dp" />
+
+                <!-- Launches GuessHintsActivity. -->
+                <Button
+                    android:id="@+id/guessHintsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="PLAY"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@drawable/primary_button"
+                    android:backgroundTint="@color/navy" />
+
+            </LinearLayout>
+
+            <!-- GUESS FLAG -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_background"
+                android:elevation="5dp"
+                android:padding="20dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Guess the Flag"
+                    android:textColor="@color/text_dark"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select the correct flag from three choices."
+                    android:textColor="@color/text_grey"
+                    android:textSize="14sp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="18dp" />
+
+                <!-- Launches GuessFlagActivity. -->
+                <Button
+                    android:id="@+id/guessFlagButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="PLAY"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@drawable/primary_button"
+                    android:backgroundTint="@color/navy" />
+
+            </LinearLayout>
+
+            <!-- ADVANCED -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_background"
+                android:elevation="5dp"
+                android:padding="20dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Advanced Level"
+                    android:textColor="@color/text_dark"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Identify all three countries within three attempts."
+                    android:textColor="@color/text_grey"
+                    android:textSize="14sp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="18dp" />
+
+                <!-- Launches AdvancedActivity. -->
+                <Button
+                    android:id="@+id/advancedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="PLAY"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@drawable/primary_button"
+                    android:backgroundTint="@color/navy" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

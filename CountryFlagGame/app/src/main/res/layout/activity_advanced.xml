@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout for Advanced. Functional controls are connected to Java with findViewById(). -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@color/navy">
+
+            <!-- Navigation button used to leave the current screen/game mode. -->
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="←  Back"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Advanced Level"
+                android:textColor="@android:color/white"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Identify all three countries"
+                android:textColor="#C8D8ED"
+                android:textSize="15sp"
+                android:layout_marginTop="4dp" />
+
+            <!-- Displays the score for the current round in the header. -->
+            <TextView
+                android:id="@+id/scoreText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total: 0    Round: 0"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginTop="14dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- FLAG 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="@drawable/card_background"
+                android:elevation="4dp"
+                android:padding="18dp"
+                android:layout_marginBottom="14dp">
+
+                <!-- First flag displayed in the Advanced round. -->
+                <ImageView
+                    android:id="@+id/flagImage1"
+                    android:layout_width="230dp"
+                    android:layout_height="130dp"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Flag 1" />
+
+                <!-- Text field for the country name belonging to flag 1. -->
+                <EditText
+                    android:id="@+id/answerInput1"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Country name"
+                    android:inputType="textCapWords"
+                    android:background="@drawable/secondary_button"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:layout_marginTop="12dp" />
+
+                <!-- Used to reveal the correct first country after a failed Advanced round. -->
+                <TextView
+                    android:id="@+id/correctAnswer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+            <!-- FLAG 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="@drawable/card_background"
+                android:elevation="4dp"
+                android:padding="18dp"
+                android:layout_marginBottom="14dp">
+
+                <!-- Second flag displayed in the Advanced round. -->
+                <ImageView
+                    android:id="@+id/flagImage2"
+                    android:layout_width="230dp"
+                    android:layout_height="130dp"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Flag 2" />
+
+                <!-- Text field for the country name belonging to flag 2. -->
+                <EditText
+                    android:id="@+id/answerInput2"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Country name"
+                    android:inputType="textCapWords"
+                    android:background="@drawable/secondary_button"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:layout_marginTop="12dp" />
+
+                <!-- Used to reveal the correct second country after a failed Advanced round. -->
+                <TextView
+                    android:id="@+id/correctAnswer2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+            <!-- FLAG 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="@drawable/card_background"
+                android:elevation="4dp"
+                android:padding="18dp">
+
+                <!-- Third flag displayed in the Advanced round. -->
+                <ImageView
+                    android:id="@+id/flagImage3"
+                    android:layout_width="230dp"
+                    android:layout_height="130dp"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Flag 3" />
+
+                <!-- Text field for the country name belonging to flag 3. -->
+                <EditText
+                    android:id="@+id/answerInput3"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Country name"
+                    android:inputType="textCapWords"
+                    android:background="@drawable/secondary_button"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:layout_marginTop="12dp" />
+
+                <!-- Used to reveal the correct third country after a failed Advanced round. -->
+                <TextView
+                    android:id="@+id/correctAnswer3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+            <!-- Shows how many incorrect/unsuccessful attempts have been used. -->
+            <TextView
+                android:id="@+id/attemptText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unsuccessful attempts: 0 / 3"
+                android:textSize="16sp"
+                android:textColor="@color/text_grey"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="18dp" />
+
+            <!-- Displays CORRECT! or WRONG! feedback after checking an answer. -->
+            <TextView
+                android:id="@+id/resultText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp" />
+
+            <!-- Main action button. Java changes this from Submit to Next when a round ends. -->
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="SUBMIT"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:background="@drawable/primary_button"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="28dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Application theme colours and system-bar styling. -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style
+        name="Theme.CountryFlagGame"
+        parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- Main app colours -->
+        <item name="colorPrimary">@color/navy</item>
+        <item name="colorPrimaryVariant">@color/navy_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/blue_accent</item>
+        <item name="colorSecondaryVariant">@color/blue_accent</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Window -->
+        <item name="android:windowBackground">@color/background_light</item>
+
+        <!-- Status bar -->
+        <item name="android:statusBarColor">@color/navy_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Bottom navigation bar -->
+        <item name="android:navigationBarColor">@color/navy_dark</item>
+        <item name="android:windowLightNavigationBar">false</item>
+
+        <!-- Default controls -->
+        <item name="android:colorAccent">@color/blue_accent</item>
+
+        <!-- Prevent default purple control colours -->
+        <item name="colorControlNormal">@color/navy</item>
+        <item name="colorControlActivated">@color/blue_accent</item>
+        <item name="colorControlHighlight">@color/blue_light</item>
+
+    </style>
+
+</resources>

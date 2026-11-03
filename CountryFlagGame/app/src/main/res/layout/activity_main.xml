@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout for Main. Functional controls are connected to Java with findViewById(). -->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- TOP HEADER -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="28dp"
+            android:background="@color/navy">
+
+            <!-- Main application title shown at the top of the start screen. -->
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Country Flag Game"
+                android:textColor="@android:color/white"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test your knowledge of flags from around the world"
+                android:textColor="#C8D8ED"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_marginTop="10dp" />
+
+            <View
+                android:layout_width="70dp"
+                android:layout_height="4dp"
+                android:background="@color/blue_accent"
+                android:layout_marginTop="18dp" />
+
+        </LinearLayout>
+
+        <!-- MAIN CONTENT -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="22dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_background"
+                android:elevation="5dp"
+                android:padding="22dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ready to play?"
+                    android:textColor="@color/text_dark"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose one of four game modes and test your flag knowledge."
+                    android:textColor="@color/text_grey"
+                    android:textSize="15sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- NEW GAME BUTTON -->
+
+                <!-- Opens the Game Mode Menu from MainActivity. -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/newGameButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="NEW COUNTRY GAME"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    app:backgroundTint="@color/navy"
+                    app:cornerRadius="14dp" />
+
+                <!-- ABOUT BUTTON -->
+
+                <!-- Opens the About dialog containing student details and declaration. -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/aboutButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="14dp"
+                    android:text="ABOUT"
+                    android:textColor="@color/navy"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    app:backgroundTint="@color/card_white"
+                    app:cornerRadius="14dp"
+                    app:strokeColor="@color/navy"
+                    app:strokeWidth="2dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4 GAME MODES"
+                android:textColor="@color/text_grey"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="26dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

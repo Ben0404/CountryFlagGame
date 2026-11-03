@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Country Flag Game</string>
+    <string name="new_game">New Country Game</string>
+    <string name="about">About</string>
+    <string name="close">Close</string>
+    <string name="student_name">Ben McMahon</string>
+    <string name="student_id">REPLACE_WITH_YOUR_B_NUMBER</string>
+    <string name="declaration">
+    I confirm that I understand what plagiarism is and have read the University’s policy on
+    plagiarism and understand the definition of plagiarism. The work that I have submitted is
+    entirely my own. Any work from other authors is duly referenced and acknowledged. I
+    understand that I may face sanctions in accordance with the policies and procedures of the
+    University.
+</string>
+</resources>
